@@ -1,0 +1,3 @@
+Track your RPS stats with python, curses and MongoDB for fun and profit!
+
+Assumes best-of-three RPS matches. No Spock shit.
