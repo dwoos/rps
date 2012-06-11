@@ -47,7 +47,8 @@ class Recorder(object):
                               'ties': game.ties, 'ts': time.time()})
 
     def record_play(self, game, play):
-        self.play_collection.save({'game_id': game.id, 'winner': play})
+        self.play_collection.save({'game_id': game.id, 'winner': play,
+                                   'ts': time.time()})
 
 if __name__ == '__main__':
     p1 = raw_input('name 1: ')
