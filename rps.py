@@ -3,6 +3,7 @@ Program for tracking rps stats
 """
 
 
+import time
 from pymongo import Connection
 from bson import ObjectId
 
@@ -43,7 +44,7 @@ class Recorder(object):
         self.game_collection.save({'_id': game.id, 'sequence': game.sequence,
                               'winner': game.winner(), game.player1: game.p1,
                               game.player2: game.p2,
-                              'ties': game.ties})
+                              'ties': game.ties, 'ts': time.time()})
 
     def record_play(self, game, play):
         self.play_collection.save({'game_id': game.id, 'winner': play})
