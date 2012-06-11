@@ -26,7 +26,7 @@ class Game(object):
     def play(self, winner):
         if winner == self.player1:
             self.p1 += 1
-        if winner == self.player2:
+        elif winner == self.player2:
             self.p2 += 1
         else:
             self.ties += 1
